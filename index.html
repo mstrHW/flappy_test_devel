@@ -6,6 +6,7 @@
     <title>Unity WebGL Player | My project</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -83,8 +84,20 @@
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
+        
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
+
+        document.body.style.textAlign = "left";
+
+
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
+  
+
+
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
@@ -118,5 +131,6 @@
       document.body.appendChild(script);
 
     </script>
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.10.0-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.6.16-min.js.gz"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1})).promise.then(function() {window.amplitude.init('17f4169418581e347b02e55fcd428fd9', {"autocapture":{"elementInteractions":true}});});</script>
   </body>
 </html>
