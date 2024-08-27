@@ -98,6 +98,8 @@
         canvas.style.height = "800px";
       }
 
+      document.fullscreenEnabled = true;
+      canvas.requestFullscreen();
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
